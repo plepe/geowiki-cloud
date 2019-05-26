@@ -8,6 +8,10 @@ module.exports = {
   },
 
   _onEditorTrigger (filename, context) {
-    console.log(filename, context)
+    let parentDom = document.getElementById('content')
+    let dom = document.createElement('div')
+    dom.id = 'geoedit'
+    parentDom.style.position = 'relative'
+    parentDom.appendChild(dom)
   }
 }

@@ -9,8 +9,7 @@ $eventDispatcher->addListener(
 
 		//load the required files
 		OCP\Util::addscript('geoedit', '../build/editor');
-		OCP\Util::addStyle('geoedit', '../build/styles');
-		OCP\Util::addStyle('geoedit', 'preview');
+		OCP\Util::addStyle('geoedit', 'style');
 	});
 
 
@@ -18,6 +17,5 @@ $eventDispatcher->addListener(
 	'OCA\Files_Sharing::loadAdditionalScripts',
 	function () {
 		OCP\Util::addScript('geoedit', '../build/editor');
-		OCP\Util::addStyle('geoedit', '../build/styles');
-		OCP\Util::addStyle('geoedit', 'preview');
+		OCP\Util::addStyle('geoedit', 'style');
 	});
