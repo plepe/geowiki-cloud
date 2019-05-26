@@ -9,7 +9,11 @@ $eventDispatcher->addListener(
 
 		//load the required files
 		OCP\Util::addscript('geoedit', '../build/editor');
+		OCP\Util::addscript('geoedit', '../node_modules/leaflet/dist/leaflet');
+		OCP\Util::addscript('geoedit', '../node_modules/leaflet-draw/dist/leaflet.draw');
 		OCP\Util::addStyle('geoedit', 'style');
+		OCP\Util::addStyle('geoedit', '../node_modules/leaflet/dist/leaflet');
+		OCP\Util::addStyle('geoedit', '../node_modules/leaflet-draw/dist/leaflet.draw');
 	});
 
 

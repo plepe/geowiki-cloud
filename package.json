@@ -14,5 +14,9 @@
     "build": "browserify js/index.js -o build/editor.js",
     "lint": "standard --fix js/*.js",
     "watch": "watchify --debug js/index.js -o build/editor.js -v"
+  },
+  "dependencies": {
+    "leaflet": "^1.5.1",
+    "leaflet-draw": "^1.0.4"
   }
 }
