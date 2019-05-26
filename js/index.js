@@ -5,7 +5,7 @@ OCA.Geoedit = require('./editor')
 OCA.Files.fileActions.registerAction({
   name: 'Edit',
   mime: 'application/vnd.geo+json',
-  actionHandler: OCA.Geoedit._onEditorTrigger,
+  actionHandler: OCA.Geoedit._onEditorTrigger.bind(OCA.Geoedit),
   permissions: OC.PERMISSION_READ,
   icon: function () {
     return OC.imagePath('core', 'actions/edit')
