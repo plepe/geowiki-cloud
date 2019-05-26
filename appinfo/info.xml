@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+        <id>geoedit</id>
+        <name>Geo Editor</name>
+        <summary>A Editor for GeoJSON files</summary>
+        <version>0.0.1</version>
+        <license>GPL-3.0</license>
+        <author>Stephan Bösch-Plepelits</author>
+        <category>office</category>
+        <website>https://github.com/plepe/geoedit-cloud</website>
+        <dependencies>
+                <nextcloud min-version="15"/>
+        </dependencies>
+</info>
