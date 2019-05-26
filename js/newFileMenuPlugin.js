@@ -16,7 +16,9 @@ module.exports = {
         let dir = menu.fileList.getCurrentDirectory()
 
         menu.fileList.createFile(name).then(function () {
-          console.log('should now edit the new file')
+          OCA.Geoedit._onEditorTrigger(
+            name, { fileList, dir }
+          )
         })
       }
     })
