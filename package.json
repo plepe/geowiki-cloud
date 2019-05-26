@@ -1,0 +1,14 @@
+{
+  "name": "geoedit-cloud",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/plepe/geoedit-cloud",
+  "author": "Stephan Bösch-Plepelits <skunk@xover.mud.at>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "lint": "standard --fix js/*.js"
+  }
+}
