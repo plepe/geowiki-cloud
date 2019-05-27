@@ -1,4 +1,4 @@
-const Editor = require('geoedit-editor')
+const Editor = require('geowiki-editor')
 
 module.exports = {
   initialize (container) {
@@ -15,7 +15,7 @@ module.exports = {
     let parentDom = document.getElementById('content')
 
     let dom = document.createElement('div')
-    dom.id = 'geoedit'
+    dom.id = 'geowiki'
     parentDom.style.position = 'relative'
     parentDom.appendChild(dom)
 
@@ -62,7 +62,7 @@ module.exports = {
   },
 
   loadFile(dir, filename, callback) {
-    $.get(OC.generateUrl('/apps/geoedit/ajax/loadfile'), { dir, filename })
+    $.get(OC.generateUrl('/apps/geowiki/ajax/loadfile'), { dir, filename })
       .done(data => callback(null, data))
       .fail(err => callback(JSON.parse(err.responseText).message))
   },
@@ -70,7 +70,7 @@ module.exports = {
   saveFile(dir, filename, filecontents, mtime, callback) {
     $.ajax({
       type: 'PUT',
-      url: OC.generateUrl('/apps/geoedit/ajax/savefile'),
+      url: OC.generateUrl('/apps/geowiki/ajax/savefile'),
       data: {
         path: dir + '/' + filename,
         filecontents,

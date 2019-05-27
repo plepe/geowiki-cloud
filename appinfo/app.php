@@ -8,18 +8,18 @@ $eventDispatcher->addListener(
 		\OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
 
 		//load the required files
-		OCP\Util::addscript('geoedit', '../build/editor');
-		OCP\Util::addscript('geoedit', '../node_modules/leaflet/dist/leaflet');
-		OCP\Util::addscript('geoedit', '../node_modules/leaflet-draw/dist/leaflet.draw');
-		OCP\Util::addStyle('geoedit', 'style');
-		OCP\Util::addStyle('geoedit', '../node_modules/leaflet/dist/leaflet');
-		OCP\Util::addStyle('geoedit', '../node_modules/leaflet-draw/dist/leaflet.draw');
+		OCP\Util::addscript('geowiki', '../build/editor');
+		OCP\Util::addscript('geowiki', '../node_modules/leaflet/dist/leaflet');
+		OCP\Util::addscript('geowiki', '../node_modules/leaflet-draw/dist/leaflet.draw');
+		OCP\Util::addStyle('geowiki', 'style');
+		OCP\Util::addStyle('geowiki', '../node_modules/leaflet/dist/leaflet');
+		OCP\Util::addStyle('geowiki', '../node_modules/leaflet-draw/dist/leaflet.draw');
 	});
 
 
 $eventDispatcher->addListener(
 	'OCA\Files_Sharing::loadAdditionalScripts',
 	function () {
-		OCP\Util::addScript('geoedit', '../build/editor');
-		OCP\Util::addStyle('geoedit', 'style');
+		OCP\Util::addScript('geowiki', '../build/editor');
+		OCP\Util::addStyle('geowiki', 'style');
 	});

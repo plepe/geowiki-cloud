@@ -20,7 +20,7 @@
  */
 
 
-namespace OCA\GeoEdit\Controller;
+namespace OCA\Geowiki\Controller;
 
 
 use OC\HintException;

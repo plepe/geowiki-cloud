@@ -7,16 +7,16 @@ module.exports = {
     }
 
     menu.addMenuEntry({
-      id: 'geoedit',
-      displayName: t('geoedit', 'New Geo file'),
-      templateName: t('geoedit', 'New Geo file.geojson'),
+      id: 'geowiki',
+      displayName: t('geowiki', 'New Geowiki file'),
+      templateName: t('geowiki', 'geowiki.geojson'),
       iconClass: 'icon-filetype-text',
       fileType: 'file',
       actionHandler: function (name) {
         let dir = menu.fileList.getCurrentDirectory()
 
         menu.fileList.createFile(name).then(function () {
-          OCA.Geoedit._onEditorTrigger(
+          OCA.Geowiki._onEditorTrigger(
             name, { fileList, dir }
           )
         })

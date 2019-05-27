@@ -1,11 +1,11 @@
-#geoedit {
+#geowiki {
   top: 50px; left: 0; right: 0; bottom: 0;
   background: white;
   position: absolute;
   z-index: 3000;
 }
 
-#geoedit > .editor_controls {
+#geowiki > .editor_controls {
         background-color: white;
         height: 44px;
         position: absolute;
@@ -15,7 +15,7 @@
         transition: top 0.5s;
 }
 
-#geoedit > .editor_controls > small.filename {
+#geowiki > .editor_controls > small.filename {
         float: left;
         color: #555;
         font-family: inherit;
@@ -28,7 +28,7 @@
         white-space: nowrap;
 }
 
-#geoedit > .editor_controls > button {
+#geowiki > .editor_controls > button {
         float: right;
         width: 34px;
         border: none;
@@ -41,12 +41,12 @@
         right: 0;
         opacity: 0.3;
 }
-#geoedit > .editor_controls > button.svg {
+#geowiki > .editor_controls > button.svg {
         padding: 22px !important;
         margin: 0 !important;
 }
 
-#geoedit > .map {
+#geowiki > .map {
   top: 44px; left: 0; right: 0; bottom: 0;
   background: white;
   position: absolute;

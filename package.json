@@ -1,8 +1,8 @@
 {
-  "name": "geoedit-cloud",
+  "name": "geowiki-cloud",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "https://github.com/plepe/geoedit-cloud",
+  "repository": "https://github.com/plepe/geowiki-cloud",
   "author": "Stephan Bösch-Plepelits <skunk@xover.mud.at>",
   "license": "GPL-3.0",
   "devDependencies": {
@@ -16,7 +16,7 @@
     "watch": "watchify --debug js/index.js -o build/editor.js -v"
   },
   "dependencies": {
-    "geoedit-editor": "*",
+    "geowiki-editor": "*",
     "leaflet": "^1.5.1",
     "leaflet-draw": "^1.0.4"
   }
