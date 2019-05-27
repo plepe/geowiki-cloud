@@ -10,6 +10,8 @@ module.exports = {
   },
 
   _onEditorTrigger (filename, context) {
+    let editor
+    let mtime
     let parentDom = document.getElementById('content')
 
     let dom = document.createElement('div')
@@ -34,24 +36,47 @@ module.exports = {
     x = document.createElement('button')
     x.appendChild(document.createTextNode('💾'))
     controls.appendChild(x)
+    x.onclick = () => {
+      console.log('here')
+      this.saveFile(context.dir, filename, editor.save(), mtime, err => {
+        if (err) {
+          return console.error(err)
+        }
+      })
+    }
 
     let mapDiv = document.createElement('div')
     mapDiv.className = 'map'
     dom.appendChild(mapDiv)
 
-    let editor = new Editor({ dom: mapDiv })
+    editor = new Editor({ dom: mapDiv })
 
     this.loadFile(context.dir, filename, (err, filedata) => {
       if (err) {
         return console.error(err)
       }
 
+      mtime = filedata.mtime
       editor.load(filedata.filecontents)
     })
   },
 
   loadFile(dir, filename, callback) {
     $.get(OC.generateUrl('/apps/geoedit/ajax/loadfile'), { dir, filename })
+      .done(data => callback(null, data))
+      .fail(err => callback(JSON.parse(err.responseText).message))
+  },
+
+  saveFile(dir, filename, filecontents, mtime, callback) {
+    $.ajax({
+      type: 'PUT',
+      url: OC.generateUrl('/apps/geoedit/ajax/savefile'),
+      data: {
+        path: dir + '/' + filename,
+        filecontents,
+        mtime
+      }
+    })
       .done(data => callback(null, data))
       .fail(err => callback(JSON.parse(err.responseText).message))
   }

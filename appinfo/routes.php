@@ -6,5 +6,10 @@ return array(
       'url' => '/ajax/loadfile',
       'verb' => 'GET'
     ),
+    array(
+      'name' => 'FileHandling#save',
+      'url' => '/ajax/savefile',
+      'verb' => 'PUT'
+    ),
   ),
 );
