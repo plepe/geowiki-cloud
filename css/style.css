@@ -4,3 +4,51 @@
   position: absolute;
   z-index: 3000;
 }
+
+#geoedit > .editor_controls {
+        background-color: white;
+        height: 44px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3000; /* because the top navigation is 2000 */
+        transition: top 0.5s;
+}
+
+#geoedit > .editor_controls > small.filename {
+        float: left;
+        color: #555;
+        font-family: inherit;
+        font-size: 100%;
+        font-weight: bolder;
+        text-overflow: ellipsis;
+        padding: 12px 0 0 14px;
+        max-width: 218px;
+        overflow: hidden;
+        white-space: nowrap;
+}
+
+#geoedit > .editor_controls > button {
+        float: right;
+        width: 34px;
+        border: none;
+        background-color: transparent;
+        padding: 0px !important;
+        height: 44px;
+        vertical-align: middle;
+        margin: 0 !important;
+        border-radius: 0;
+        right: 0;
+        opacity: 0.3;
+}
+#geoedit > .editor_controls > button.svg {
+        padding: 22px !important;
+        margin: 0 !important;
+}
+
+#geoedit > .map {
+  top: 44px; left: 0; right: 0; bottom: 0;
+  background: white;
+  position: absolute;
+  z-index: 3000;
+}
