@@ -34,14 +34,15 @@ module.exports = {
     x.onclick = () => parentDom.removeChild(dom)
 
     x = document.createElement('button')
-    x.appendChild(document.createTextNode('💾'))
+    x.className = 'save'
     controls.appendChild(x)
     x.onclick = () => {
-      console.log('here')
       this.saveFile(context.dir, filename, editor.save(), mtime, err => {
         if (err) {
           return console.error(err)
         }
+
+        dom.classList.remove('geowiki_modified')
       })
     }
 
@@ -50,6 +51,8 @@ module.exports = {
     dom.appendChild(mapDiv)
 
     editor = new Editor({ dom: mapDiv })
+
+    editor.on('change', () => dom.classList.add('geowiki_modified'))
 
     this.loadFile(context.dir, filename, (err, filedata) => {
       if (err) {

@@ -45,6 +45,14 @@
         padding: 22px !important;
         margin: 0 !important;
 }
+#geowiki > .editor_controls > button.save::before {
+        font-size: 200%;
+        content: '🖫';
+}
+#geowiki.geowiki_modified > .editor_controls > button.save {
+        color: red;
+        opacity: 0.7;
+}
 
 #geowiki > .map {
   top: 44px; left: 0; right: 0; bottom: 0;
